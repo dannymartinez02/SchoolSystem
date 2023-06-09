@@ -1,0 +1,233 @@
+﻿*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box; /*ESTILOS DE CAJAS FLEXIBLES*/
+}
+
+body{
+    overflow: hidden;
+}
+
+.fondocurvo{
+	position: fixed !important;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: -1; /*RESTANDO UNA CAPA PARA SUPERPONER BARRIL*/
+}
+
+.contenedor{
+	padding: 0 2rem !important;
+	/*ADAPTANDO 100% ANCHO Y ALTO SIN IMPORTAR DIMENSIONES DE PANTALLA*/
+    width: 100vw;
+    height: 100vh;
+    /*CSS GRID*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7rem !important;
+}
+
+.imagen_fondo_principal{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.contenedor_login{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+}
+
+.iconprincipal{
+	max-width: 540px !important;
+	/*transform: rotate(30deg) !important;
+	--> SE PUEDE HACER CURVO DESDE ACA, O BIEN
+		DIRECTAMENTE DESDE LA IMAGEN...
+	*/
+}
+
+.imagen_fondo_principal img{
+	max-width: 540px !important;
+}
+
+.tituloprincipal{
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 2.5rem !important;
+}
+
+form{
+	width: 80% !important;
+}
+
+.contenedor_login img{
+    height: 100px;
+}
+
+.contenedor_login h2{
+	margin: 15px 0;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 2.9rem;
+}
+
+.contenedor_login .contenedor_campos{
+	position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid rgb(105,5,200);
+}
+
+.contenedor_login .contenedor_campos.nombre_usuario{
+	margin-top: 0;
+}
+
+.iconos_personalizados{
+	color: #d9d9d9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.iconos_personalizados i{
+	transition: .3s;
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	-o-transition: .3s;
+}
+
+.contenedor_campos > .subcontenedor_campos{
+    position: relative;
+	height: 45px;
+}
+
+.contenedor_campos > .subcontenedor_campos > h5{
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #999;
+	font-size: 1.2rem;
+	transition: .3s;
+	font-family: 'Exo 2', sans-serif;
+}
+
+.contenedor_campos:before, .contenedor_campos:after{
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	width: 0%;
+	height: 2px;
+	background-color: rgb(105,5,130);
+	transition: .4s;
+}
+
+.contenedor_campos:before{
+	right: 50%;
+}
+
+.contenedor_campos:after{
+	left: 50%;
+}
+
+.contenedor_campos.focus:before, .contenedor_campos.focus:after{
+	width: 50%;
+}
+
+.contenedor_campos.focus > .subcontenedor_campos > h5{
+	top: -5px;
+	font-size: 1.02rem;
+	font-family: 'Exo 2', sans-serif;
+}
+
+.contenedor_campos.focus > .iconos_personalizados > i{
+	color: #5f27cd;
+}
+
+.contenedor_campos > .subcontenedor_campos > input{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0.5rem 0.7rem;
+	font-size: 1.2rem;
+	color: #555;
+	font-family: 'Exo 2', sans-serif;
+}
+
+.contenedor_campos.clave_usuario{
+	margin-bottom: 4px;
+}
+
+.boton-ingresar{
+	display: block;
+	width: 100%;
+	height: 50px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #82589F, #341f97, #82589F);
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Exo 2', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.boton-ingresar:hover{
+	background-position: right;
+}
+
+/*
+	-> ESTILOS RESPONSIVOS
+*/
+
+@media screen and (max-width: 1050px){
+	.contenedor{
+		grid-gap: 5rem;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	form{
+		width: 80% !important;
+	}
+
+	.contenedor_login h2{
+        font-size: 2.4rem;
+        margin: 8px 0;
+	}
+
+	.imagen_fondo_principal img{
+		width: 460px !important;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.contenedor{
+		grid-template-columns: 1fr;
+	}
+
+	.imagen_fondo_principal{
+		display: none;
+	}
+
+	.fondocurvo{
+		display: none;
+	}
+
+	.contenedor_login{
+		justify-content: center;
+	}
+}

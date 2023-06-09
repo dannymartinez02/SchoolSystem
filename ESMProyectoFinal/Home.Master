@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="ESMProyectoFinal.Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title> .::HOME || ESM ::.</title>
+    <link rel="stylesheet" type="text/css" href="Style/HomeMaster.css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="navbar">
+            <ul>
+                <li><a href="#" onclick="setActiveMenu(event, 'inicio')">Inicio</a></li>
+                <li><a href="Nosotros.aspx">Acerca de</a></li>
+                <li><a href="Servicios.aspx">Servicios</a></li>
+                <li><a href="Contactanos.aspx">Contacto</a></li>
+            </ul>
+            <ul id="btnIngresar" >
+                <li><a href="Login.aspx">Ingresar</a></li>
+            </ul>
+        </div>
+        
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Logo de la empresa" />
+                </div>
+                <div class="footer-navigation">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Todos los derechos reservados</p>
+            </div>
+        </footer>
+
+    </div>
+    </form>
+    <script>
+        function setActiveMenu(event, id) {
+            event.preventDefault();
+
+            const menuItems = document.querySelectorAll('.navbar ul li');
+            for (let i = 0; i < menuItems.length; i++) {
+                menuItems[i].classList.remove('active');
+            }
+
+            const selectedMenuItem = document.getElementById(id);
+            selectedMenuItem.classList.add('active');
+        }
+
+    </script>
+</body>
+</html>

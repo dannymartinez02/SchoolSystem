@@ -1,0 +1,136 @@
+﻿*{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}*/
+
+h1 {
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+button {
+  display: block;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+form {
+    background-color: #333;
+    color: #ffffff;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #0062cc;
+}
+
+lu {
+    display: inline;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.logout {
+  margin-left: 20px;
+}
+
+.boton-futurista {
+  background-color: #4CAF50; /* Color de fondo */
+  border: none; /* Borde sin estilo */
+  color: white; /* Color de texto */
+  padding: 15px 32px; /* Espacio interno */
+  text-align: center; /* Alineación de texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar como bloque */
+  font-size: 16px; /* Tamaño de fuente */
+  -webkit-transition-duration: 0.4s; /* Duración de la transición */
+  transition-duration: 0.4s;
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+}
+
+.boton-futurista:hover {
+  background-color: #008CBA; /* Nuevo color de fondo al pasar por encima */
+  color: white; /* Nuevo color de texto al pasar por encima */
+}
+
+.boton-futuristaCerrar {
+  background-color: #4CAF50; /* Color de fondo */
+  border: none; /* Borde sin estilo */
+  color: white; /* Color de texto */
+  padding: 15px 32px; /* Espacio interno */
+  text-align: center; /* Alineación de texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar como bloque */
+  font-size: 16px; /* Tamaño de fuente */
+  -webkit-transition-duration: 0.4s; /* Duración de la transición */
+  transition-duration: 0.4s;
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+}
+
+.boton-futuristaCerrar:hover {
+   background-color: #f00; /* Nuevo color de fondo al pasar por encima */
+  color: white; /* Nuevo color de texto al pasar por encima */
+}
+
